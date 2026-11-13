@@ -1,0 +1,13 @@
+﻿Tanggal,Blok,Jenis,Kategori,Nominal,Keterangan,Metode,Bukti,Username
+2026-11-10,Blok 1,Pemasukan,Hasil panen,1500000,test,Tunai,,
+2026-11-11,Blok 1,Pemasukan,Hasil panen,3000000,test,Tunai,,
+2026-11-11,Blok 1,Pengeluaran,Beli pupuk,1500000,test,Tunai,,
+2026-11-12,Blok 1,Pengeluaran,Beli Plastik,200000,test notif,Tunai,,owner
+2026-11-12,Blok 2,Pengeluaran,Beli pupuk,300000,test notif2,Tunai,,owner
+2026-11-12,Blok 3,Pemasukan,Hasil Panen,1500000,test notif3,Tunai,,owner
+2026-11-12,Blok 4,Pemasukan,Hasil Panen,2500000,testnotif4,Tunai,,danang
+2026-11-12,Blok 4,Pemasukan,Hasil Panen,2500000,testnotif4,Tunai,,danang
+2026-11-12,Blok 2,Pemasukan,Hasil Panen,1000000,test notif5,Tunai,,danang
+2026-11-12,Blok 3,Pengeluaran,Beli pupuk,200000,test bukti,Transfer,,owner
+2026-11-12,Blok 4,Pengeluaran,Beli pupuk,800000,test,Tunai,,danang
+2026-11-13,Blok 3,Pengeluaran,beli pupuk,800000,test,Tunai,,danang

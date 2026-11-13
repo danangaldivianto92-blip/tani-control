@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaniControl - Edit Transaksi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container my-5" style="max-width: 700px;">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-success text-white py-3">
+                <h5 class="mb-0"><i class="bi bi-pencil-square me-2"></i> Edit Data Transaksi</h5>
+            </div>
+            <div class="card-body bg-white p-4">
+                <form method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Tanggal</label>
+                        <input type="date" class="form-control" name="tanggal" value="{{ data.Tanggal }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Pilih Blok</label>
+                        <select class="form-select" name="blok">
+                            <option value="Blok 1" {% if data.Blok == 'Blok 1' %}selected{% endif %}>Blok 1</option>
+                            <option value="Blok 2" {% if data.Blok == 'Blok 2' %}selected{% endif %}>Blok 2</option>
+                            <option value="Blok 3" {% if data.Blok == 'Blok 3' %}selected{% endif %}>Blok 3</option>
+                            <option value="Blok 4" {% if data.Blok == 'Blok 4' %}selected{% endif %}>Blok 4</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Jenis Transaksi</label>
+                        <select class="form-select" name="jenis">
+                            <option value="Pemasukan" {% if data.Jenis == 'Pemasukan' %}selected{% endif %}>Pemasukan</option>
+                            <option value="Pengeluaran" {% if data.Jenis == 'Pengeluaran' %}selected{% endif %}>Pengeluaran</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Kategori</label>
+                        <input type="text" class="form-control" name="kategori" value="{{ data.Kategori }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Nominal (Rp)</label>
+                        <input type="number" class="form-control" name="nominal" value="{{ data.Nominal }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Metode Pembayaran</label>
+                        <select class="form-select" name="metode">
+                            <option value="Tunai" {% if data.Metode == 'Tunai' %}selected{% endif %}>Tunai</option>
+                            <option value="Transfer" {% if data.Metode == 'Transfer' %}selected{% endif %}>Transfer</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Keterangan</label>
+                        <input type="text" class="form-control" name="keterangan" value="{{ data.Keterangan }}">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Ganti Bukti / Struk (Opsional)</label>
+                        <input type="file" class="form-control" name="bukti" accept="image/*">
+                        {% if data.Bukti %}
+                            <small class="text-muted mt-1 d-block">File saat ini: {{ data.Bukti }}</small>
+                        {% endif %}
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <a href="{{ url_for('admin') }}" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Batal</a>
+                        <button type="submit" class="btn btn-success fw-bold"><i class="bi bi-save me-1"></i> Simpan Perubahan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
